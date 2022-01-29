@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineChat.Entity", "OnlineChat.Entity\OnlineChat.Entity.csproj", "{7A5EB3F3-3709-45CD-B56E-C1355E865E79}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineChat.Core", "OnlineChat.Core\OnlineChat.Core.csproj", "{F7901537-80C3-41BE-9C35-881711E414C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineChat.Dal", "OnlineChat.Dal\OnlineChat.Dal.csproj", "{21DB14FA-7028-4D8F-A4AB-ED433D4D2E18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineChat.Api", "OnlineChat.Api\OnlineChat.Api.csproj", "{EEA05AE3-D878-477D-AF8D-15A4D17BB5EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A5EB3F3-3709-45CD-B56E-C1355E865E79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A5EB3F3-3709-45CD-B56E-C1355E865E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A5EB3F3-3709-45CD-B56E-C1355E865E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A5EB3F3-3709-45CD-B56E-C1355E865E79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7901537-80C3-41BE-9C35-881711E414C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7901537-80C3-41BE-9C35-881711E414C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7901537-80C3-41BE-9C35-881711E414C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7901537-80C3-41BE-9C35-881711E414C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21DB14FA-7028-4D8F-A4AB-ED433D4D2E18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21DB14FA-7028-4D8F-A4AB-ED433D4D2E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21DB14FA-7028-4D8F-A4AB-ED433D4D2E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21DB14FA-7028-4D8F-A4AB-ED433D4D2E18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEA05AE3-D878-477D-AF8D-15A4D17BB5EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEA05AE3-D878-477D-AF8D-15A4D17BB5EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEA05AE3-D878-477D-AF8D-15A4D17BB5EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEA05AE3-D878-477D-AF8D-15A4D17BB5EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5837883-1E91-4228-8AF4-8AB05A997228}
+	EndGlobalSection
+EndGlobal
