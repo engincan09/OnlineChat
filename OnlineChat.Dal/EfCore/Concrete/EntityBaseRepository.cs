@@ -10,59 +10,53 @@ using System.Linq.Expressions;
 
 namespace OnlineChat.Dal.EfCore.Concrete
 {
-    public class EntityBaseRepository<TEntity, TContext> : HttpContextAccessor, IEntityBaseRepository<TEntity> where TEntity : class, IEntity, new() where TContext : DbContext, new()
+    public class EntityBaseRepository<TEntity> : HttpContextAccessor, IEntityBaseRepository<TEntity> where TEntity : class, IEntity, new()
     {
+        private OnlineChatContext _context;
+        public EntityBaseRepository(OnlineChatContext context)
+        {
+            _context = context;
+        }
+
 
         public void Add(TEntity entity)
         {
-            using (TContext context = new TContext())
-            {          
-                var addedEntity = context.Entry(entity);
-                addedEntity.State = EntityState.Added;
-                BeforeSaving();
-                context.SaveChanges();
-            }
+
+            var addedEntity = _context.Entry(entity);
+            addedEntity.State = EntityState.Added;
+            BeforeSaving();
+            _context.SaveChanges();
         }
 
         public void Delete(TEntity entity)
         {
-            using (TContext context = new TContext())
-            {
-                var deletedEntity = context.Entry(entity);
-                deletedEntity.State = EntityState.Deleted;
-                BeforeSaving();
-                context.SaveChanges();
-            }
+
+            var deletedEntity = _context.Entry(entity);
+            deletedEntity.State = EntityState.Deleted;
+            BeforeSaving();
+            _context.SaveChanges();
         }
 
         public TEntity Get(Expression<Func<TEntity, bool>> filter)
         {
-            using (TContext context = new TContext())
-            {
-                return context.Set<TEntity>().Where(filter).SingleOrDefault();
-            }
+            return _context.Set<TEntity>().Where(filter).SingleOrDefault();
         }
 
         public List<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
         {
-            using (TContext context = new TContext())
-            {
-                return filter == null ? context.Set<TEntity>().ToList() : context.Set<TEntity>().Where(filter).ToList();
-            }
+            return filter == null ? _context.Set<TEntity>().ToList() : _context.Set<TEntity>().Where(filter).ToList();
         }
 
         public void Update(TEntity entity)
         {
-            using (TContext context = new TContext())
-            {
-                var updatedEntity = context.Entry(entity);
-                updatedEntity.State = EntityState.Modified;
-                BeforeSaving();
-                context.SaveChanges();
-            }
+            var updatedEntity = _context.Entry(entity);
+            updatedEntity.State = EntityState.Modified;
+            BeforeSaving();
+            _context.SaveChanges();
+
         }
 
-        private void BeforeSaving() 
+        private void BeforeSaving()
         {
             if (HttpContext != null)
             {
@@ -70,36 +64,31 @@ namespace OnlineChat.Dal.EfCore.Concrete
                 int.TryParse(HttpContext?.User.Claims.FirstOrDefault(x => x.Type == "userId")?.Value, out int id);
                 int? userId = (id == 0 ? (int?)null : id);
 
-                using (TContext context = new TContext())
+
+                foreach (var item in _context.ChangeTracker.Entries().Where(e => e.Entity is BaseEntity))
                 {
-                    foreach (var item in context.ChangeTracker.Entries().Where(e=> e.Entity  is BaseEntity))
+                    switch (item.State)
                     {
-                        switch (item.State)
-                        {
-                            case EntityState.Detached:
-                                ((BaseEntity)item.Entity).CreatedAt = now;
-                                ((BaseEntity)item.Entity).CreatedUserId = userId;
-                                ((BaseEntity)item.Entity).IsActive = true;
-                                break;
-                            case EntityState.Unchanged:
-                                break;
-                            case EntityState.Deleted:
-                                ((BaseEntity)item.Entity).IsActive = false;
-                                break;
-                            case EntityState.Modified:
-                                ((BaseEntity)item.Entity).UpdateTime = now;
-                                break;
-                            case EntityState.Added:
-                                break;                       
-                            default:
-                                break;
-                        }
+                        case EntityState.Detached:
+                            ((BaseEntity)item.Entity).CreatedAt = now;
+                            ((BaseEntity)item.Entity).CreatedUserId = userId;
+                            ((BaseEntity)item.Entity).IsActive = true;
+                            break;
+                        case EntityState.Unchanged:
+                            break;
+                        case EntityState.Deleted:
+                            ((BaseEntity)item.Entity).IsActive = false;
+                            break;
+                        case EntityState.Modified:
+                            ((BaseEntity)item.Entity).UpdateTime = now;
+                            break;
+                        case EntityState.Added:
+                            break;
+                        default:
+                            break;
                     }
                 }
-
             }
-
-
         }
     }
 }

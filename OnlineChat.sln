@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineChat.Core", "OnlineCh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineChat.Dal", "OnlineChat.Dal\OnlineChat.Dal.csproj", "{21DB14FA-7028-4D8F-A4AB-ED433D4D2E18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineChat.Api", "OnlineChat.Api\OnlineChat.Api.csproj", "{EEA05AE3-D878-477D-AF8D-15A4D17BB5EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineChat.Api", "OnlineChat.Api\OnlineChat.Api.csproj", "{EEA05AE3-D878-477D-AF8D-15A4D17BB5EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineChat.Bll", "OnlineChat.Bll\OnlineChat.Bll.csproj", "{83B9F940-34B2-4E58-847B-E38C817AC65C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{EEA05AE3-D878-477D-AF8D-15A4D17BB5EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEA05AE3-D878-477D-AF8D-15A4D17BB5EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEA05AE3-D878-477D-AF8D-15A4D17BB5EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83B9F940-34B2-4E58-847B-E38C817AC65C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83B9F940-34B2-4E58-847B-E38C817AC65C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83B9F940-34B2-4E58-847B-E38C817AC65C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83B9F940-34B2-4E58-847B-E38C817AC65C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
