@@ -1,4 +1,14 @@
 # OnlineChat
+
+Uygulamanın amacı; bu uygulama basit bir şekilde bir sohbet, mesajlaşma uygulamasıdır. Uygulama arayüzü içerisinde odalar ve bu odalara giriş kuralları tanımlanacaktır. Yeni üyeler temel seviye odalardan başlarken üst seviye odalara geçmek için odalarda yayınlanan anlık bilgi sorularını cevaplayarak puan biriktirmeleri beklenecektir. Diğer üst seviye odalara geçebilmek için bu puanları kullanacaklardır.  <br>
+
+The purpose of the application; this app is simply a chat, messaging app. Rooms and entrance rules to these rooms will be defined in the application interface. While new members start from the basic level rooms, they will be expected to accumulate points by answering the instant information questions posted in the rooms in order to move on to the higher level rooms. They will use these points to move on to other higher level rooms. 
+
+
+
+<hr>
+
+
 Mimari Yapı - Architectural Building 
 
 <h2>Core</h2> <br>
