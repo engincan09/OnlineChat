@@ -5,6 +5,6 @@ namespace OnlineChat.Core.Utilities.Jwt
 {
     public interface ITokenHelper
     {
-        AccessToken CreateToken(User user, List<UserRole> userRole);
+        AccessToken CreateToken(User user, List<Role> roles);
     }
 }
