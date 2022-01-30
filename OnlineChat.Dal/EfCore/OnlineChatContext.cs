@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OnlineChat.Core.Entities.Concrete.Shared;
+using OnlineChat.Core.Entities.Systems;
+using OnlineChat.Core.Entities.Users;
 using OnlineChat.Dal.EfCore.Extensions;
 using OnlineChat.Entity.Rooms;
-using OnlineChat.Entity.Shared;
-using OnlineChat.Entity.Systems;
 using OnlineChat.Entity.Users;
 using System.Reflection;
 

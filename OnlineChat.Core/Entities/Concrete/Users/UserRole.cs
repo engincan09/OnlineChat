@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace OnlineChat.Entity.Users
+namespace OnlineChat.Core.Entities.Users
 {
     public class UserRole : BaseEntity
     {

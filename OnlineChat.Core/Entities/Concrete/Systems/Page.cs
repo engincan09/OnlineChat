@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace OnlineChat.Entity.Systems
+namespace OnlineChat.Core.Entities.Systems
 {
     /// <summary>
     /// It is the area where all pages in the system are kept.

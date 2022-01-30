@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OnlineChat.Entity.Shared
+namespace OnlineChat.Core.Entities.Concrete.Shared
 {
     internal interface INameAndOrder
     {

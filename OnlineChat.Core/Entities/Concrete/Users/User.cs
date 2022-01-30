@@ -1,7 +1,7 @@
 ﻿using OnlineChat.Core.Entities.Concrete;
 using System.ComponentModel.DataAnnotations;
 
-namespace OnlineChat.Entity.Users
+namespace OnlineChat.Core.Entities.Users
 {
     public class User : BaseEntity
     {

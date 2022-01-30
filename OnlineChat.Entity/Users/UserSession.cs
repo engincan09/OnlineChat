@@ -1,4 +1,5 @@
 ﻿using OnlineChat.Core.Entities.Concrete;
+using OnlineChat.Core.Entities.Users;
 using OnlineChat.Entity.Rooms;
 using System;
 using System.ComponentModel.DataAnnotations;

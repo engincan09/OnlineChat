@@ -1,8 +1,5 @@
-﻿using OnlineChat.Dal.EfCore.Abstract;
-using OnlineChat.Entity.Users;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using OnlineChat.Core.Entities.Users;
+using OnlineChat.Dal.EfCore.Abstract;
 
 namespace OnlineChat.Bll.EfCore.Abstract.Users
 {

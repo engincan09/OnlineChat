@@ -1,11 +1,11 @@
 ﻿using OnlineChat.Core.Entities.Concrete;
-using OnlineChat.Entity.Users;
+using OnlineChat.Core.Entities.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace OnlineChat.Entity.Systems
+namespace OnlineChat.Core.Entities.Systems
 {
     /// <summary>
     /// It is the table where all listing and access rights of the pages are kept.

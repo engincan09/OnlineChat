@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using OnlineChat.Entity.Users;
+using OnlineChat.Core.Entities.Users;
 using System;
 using System.Collections.Generic;
 using System.Text;

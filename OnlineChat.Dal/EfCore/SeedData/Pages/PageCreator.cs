@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using OnlineChat.Entity.Systems;
-using System;
+using OnlineChat.Core.Entities.Systems;
 
 namespace OnlineChat.Dal.EfCore.SeedData.Pages
 {
